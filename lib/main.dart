@@ -20,10 +20,15 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blue,
-      child: Center(
-        child: Text("Hello world"),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Meu App"),
+      ),
+      body: Container(
+        color: Colors.blue,
+        child: Center(
+          child: Text("Hello Word"),
+        ),
       ),
     );
   }
