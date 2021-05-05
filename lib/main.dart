@@ -27,9 +27,8 @@ class HomePage extends StatelessWidget {
       body: Container(
         width: double.infinity,
         color: Colors.red,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          crossAxisAlignment: CrossAxisAlignment.center,
+        child: ListView(
+          scrollDirection: Axis.vertical,
           children: <Widget>[
             Container(
               color: Colors.yellow,
