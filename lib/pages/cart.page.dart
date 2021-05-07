@@ -8,7 +8,6 @@ class CartPage extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0.0,
       ),
-      backgroundColor: Colors.white,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -18,7 +17,7 @@ class CartPage extends StatelessWidget {
             ),
           ),
           Container(
-            color: Colors.white,
+            color: Theme.of(context).accentColor,
             height: 80,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -55,7 +54,9 @@ class CartPage extends StatelessWidget {
                   child: FlatButton(
                     child: Text(
                       "Checkout",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(
+                        color: Theme.of(context).accentColor,
+                      ),
                     ),
                     onPressed: () => {},
                   ),
@@ -74,7 +75,8 @@ Widget productList(context) {
     children: <Widget>[
       productItem(context, "BeoPlay Speaker", "755", "assets/product-1.png"),
       productItem(context, "Leather Wristwatch", "450", "assets/product-2.png"),
-      productItem(context, "Smart Bluetooth Speaker", "900", "assets/product-3.png"),
+      productItem(
+          context, "Smart Bluetooth Speaker", "900", "assets/product-3.png"),
       productItem(context, "Smart Luggage", "100", "assets/product-4.png"),
       productItem(context, "Smartphone Case", "99", "assets/product-5.png"),
       productItem(context, "Speakers Stand", "49", "assets/product-6.png"),
@@ -120,7 +122,7 @@ Widget productItem(context, String title, String price, String image) {
                 height: 30,
                 width: 120,
                 decoration: BoxDecoration(
-                  color: Color(0xFFF0F0F0),
+                  color: Theme.of(context).accentColor,
                   borderRadius: BorderRadius.all(
                     Radius.circular(5),
                   ),

@@ -5,12 +5,12 @@ class SigupPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white.withOpacity(0),
+        backgroundColor: Colors.white,
         elevation: 0,
       ),
       body: SingleChildScrollView(
         child: Container(
-          color: Color(0xFFF5F5F5),
+          color: Theme.of(context).accentColor,
           padding: EdgeInsets.only(
             top: 80,
             left: 20,
@@ -22,7 +22,7 @@ class SigupPage extends StatelessWidget {
               Container(
                 height: 450,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Theme.of(context).accentColor,
                   boxShadow: [
                     new BoxShadow(
                       color: Colors.black12,
@@ -43,10 +43,7 @@ class SigupPage extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         "Signup",
-                        style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w500,
-                        ),
+                        style: Theme.of(context).textTheme.display2,
                       ),
                       SizedBox(
                         height: 10,
@@ -63,8 +60,8 @@ class SigupPage extends StatelessWidget {
                           ),
                         ),
                         style: TextStyle(
-                          fontSize: 20,
-                        ),
+                            fontSize: 20,
+                            color: Theme.of(context).primaryColor),
                       ),
                       TextFormField(
                         //autofocus: true,
@@ -105,7 +102,7 @@ class SigupPage extends StatelessWidget {
                       Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          color: Colors.blue,
+                          color: Theme.of(context).primaryColor,
                           borderRadius: BorderRadius.all(
                             Radius.circular(5),
                           ),
