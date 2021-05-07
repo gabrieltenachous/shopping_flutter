@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:shopping/widgets/category/category-list.widget.dart';
 import 'package:shopping/widgets/product/product-list.widget.dart';
-import 'package:shopping/widgets/searcb-box.widgets.dart';
+import 'package:shopping/widgets/search-box.widget.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
+      body: Container(
         padding: EdgeInsets.all(15),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+        child: ListView(
           children: <Widget>[
             SizedBox(
               height: 60,
@@ -31,18 +30,18 @@ class HomePage extends StatelessWidget {
               child: CategoryList(),
             ),
             SizedBox(
-              height: 10,
+              height: 30,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+              children: <Widget>[
                 Text(
-                  "Best Salling",
+                  "Best Selling",
                   style: Theme.of(context).textTheme.headline,
                 ),
                 FlatButton(
-                  onPressed: () => {},
                   child: Text("See All"),
+                  onPressed: () => {},
                 ),
               ],
             ),

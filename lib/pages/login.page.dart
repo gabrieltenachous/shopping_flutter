@@ -1,13 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping/pages/signup.page.dart';
-
-import 'home.page.dart';
 
 class LoginPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
   String _email;
   String _password;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,29 +17,29 @@ class LoginPage extends StatelessWidget {
             right: 20,
             bottom: 40,
           ),
-          child: Form(
-            key: _formKey,
-            child: Column(
-              children: <Widget>[
-                Container(
-                  height: 480,
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).accentColor,
-                    boxShadow: [
-                      new BoxShadow(
-                        color: Colors.black12,
-                        offset: new Offset(1, 2.0),
-                        blurRadius: 5,
-                        spreadRadius: 1,
-                      ),
-                    ],
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                      left: 15,
-                      right: 40,
-                      top: 60,
+          child: Column(
+            children: <Widget>[
+              Container(
+                height: 480,
+                decoration: BoxDecoration(
+                  color: Theme.of(context).accentColor,
+                  boxShadow: [
+                    new BoxShadow(
+                      color: Colors.black12,
+                      offset: new Offset(1, 2.0),
+                      blurRadius: 5,
+                      spreadRadius: 1,
                     ),
+                  ],
+                ),
+                child: Padding(
+                  padding: EdgeInsets.only(
+                    left: 15,
+                    right: 15,
+                    top: 60,
+                  ),
+                  child: Form(
+                    key: _formKey,
                     child: Column(
                       children: <Widget>[
                         Row(
@@ -53,7 +51,10 @@ class LoginPage extends StatelessWidget {
                                   "Welcome",
                                   style: Theme.of(context).textTheme.display2,
                                 ),
-                                Text("Sign in to continue"),
+                                Text(
+                                  "Sign in to continue",
+                                  style: Theme.of(context).textTheme.subhead,
+                                ),
                               ],
                             ),
                             FlatButton(
@@ -67,7 +68,7 @@ class LoginPage extends StatelessWidget {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => SigupPage(),
+                                    builder: (context) => SignupPage(),
                                   ),
                                 );
                               },
@@ -78,7 +79,7 @@ class LoginPage extends StatelessWidget {
                           height: 60,
                         ),
                         TextFormField(
-                          //autofocus: true,
+                          // autofocus: true,
                           keyboardType: TextInputType.emailAddress,
                           decoration: InputDecoration(
                             labelText: "Email",
@@ -88,23 +89,23 @@ class LoginPage extends StatelessWidget {
                               fontSize: 16,
                             ),
                           ),
-                          validator: (value) {
-                            if (value.isEmpty) {
-                              return 'Invalid Email';
-                            }
-                            return null;
-                          },
-
-                          onSaved: (input) => _email = input,
                           style: TextStyle(
                             fontSize: 20,
                             color: Theme.of(context).primaryColor,
                           ),
+                          validator: (value) {
+                            if (value.isEmpty) {
+                              return 'Invalid E-mail';
+                            }
+                            return null;
+                          },
+                          onSaved: (input) => _email = input,
                         ),
                         SizedBox(
                           height: 10,
                         ),
                         TextFormField(
+                          // autofocus: true,
                           keyboardType: TextInputType.text,
                           obscureText: true,
                           decoration: InputDecoration(
@@ -131,14 +132,17 @@ class LoginPage extends StatelessWidget {
                           height: 40,
                           alignment: Alignment.centerRight,
                           child: FlatButton(
-                            onPressed: () {},
                             child: Text(
                               "Forgot your password?",
                               style: TextStyle(
                                 color: Theme.of(context).primaryColor,
                               ),
                             ),
+                            onPressed: () {},
                           ),
+                        ),
+                        SizedBox(
+                          height: 10,
                         ),
                         Container(
                           width: double.infinity,
@@ -150,7 +154,7 @@ class LoginPage extends StatelessWidget {
                           ),
                           child: FlatButton(
                             child: Text(
-                              "Sign in",
+                              "Sign In",
                               style: TextStyle(
                                 color: Colors.white,
                               ),
@@ -163,7 +167,7 @@ class LoginPage extends StatelessWidget {
 
                                 Scaffold.of(context).showSnackBar(
                                   SnackBar(
-                                    content: Text('Welcome,$_email'),
+                                    content: Text('Welcome, $_email'),
                                   ),
                                 );
                               }
@@ -174,77 +178,77 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.only(top: 15, bottom: 15),
-                  child: Text(
-                    "- OR -",
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w300,
-                    ),
+              ),
+              Container(
+                padding: EdgeInsets.only(top: 15, bottom: 15),
+                child: Text(
+                  "- OR -",
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w300,
                   ),
                 ),
-                Container(
-                  width: double.infinity,
-                  height: 60,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      width: 2.0,
-                      color: Theme.of(context).primaryColor,
-                    ),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(5),
-                    ),
+              ),
+              Container(
+                width: double.infinity,
+                height: 60,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 2.0,
+                    color: Theme.of(context).primaryColor,
                   ),
-                  child: FlatButton(
-                    child: Row(
-                      children: <Widget>[
-                        Container(
-                          height: 24,
-                          width: 100,
-                          child: Image.asset(
-                            "assets/facebook.png",
-                          ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(5),
+                  ),
+                ),
+                child: FlatButton(
+                  child: Row(
+                    children: <Widget>[
+                      Container(
+                        height: 24,
+                        width: 100,
+                        child: Image.asset(
+                          "assets/facebook.png",
                         ),
-                        Text("Sign In with Facebook"),
-                      ],
-                    ),
-                    onPressed: () {},
+                      ),
+                      Text("Sign In with Facebook"),
+                    ],
+                  ),
+                  onPressed: () {},
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Container(
+                width: double.infinity,
+                height: 60,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 2.0,
+                    color: Theme.of(context).primaryColor,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(5),
                   ),
                 ),
-                SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  width: double.infinity,
-                  height: 60,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      width: 2.0,
-                      color: Theme.of(context).primaryColor,
-                    ),
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(5),
-                    ),
-                  ),
-                  child: FlatButton(
-                    child: Row(
-                      children: <Widget>[
-                        Container(
-                          height: 24,
-                          width: 100,
-                          child: Image.asset(
-                            "assets/google.png",
-                          ),
+                child: FlatButton(
+                  child: Row(
+                    children: <Widget>[
+                      Container(
+                        height: 24,
+                        width: 100,
+                        child: Image.asset(
+                          "assets/google.png",
                         ),
-                        Text("Sign In with Google"),
-                      ],
-                    ),
-                    onPressed: () {},
+                      ),
+                      Text("Sign In with Google"),
+                    ],
                   ),
+                  onPressed: () {},
                 ),
-              ],
-            ),
+              )
+            ],
           ),
         ),
       ),

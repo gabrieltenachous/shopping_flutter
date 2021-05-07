@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 
-class SigupPage extends StatelessWidget {
+class SignupPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.white.withOpacity(0),
         elevation: 0,
       ),
       body: SingleChildScrollView(
         child: Container(
-          color: Theme.of(context).accentColor,
           padding: EdgeInsets.only(
             top: 80,
             left: 20,
@@ -20,9 +19,8 @@ class SigupPage extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Container(
-                height: 450,
                 decoration: BoxDecoration(
-                  color: Theme.of(context).accentColor,
+                  color: Colors.white,
                   boxShadow: [
                     new BoxShadow(
                       color: Colors.black12,
@@ -46,10 +44,10 @@ class SigupPage extends StatelessWidget {
                         style: Theme.of(context).textTheme.display2,
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 60,
                       ),
                       TextFormField(
-                        //autofocus: true,
+                        // autofocus: true,
                         keyboardType: TextInputType.text,
                         decoration: InputDecoration(
                           labelText: "Name",
@@ -60,29 +58,15 @@ class SigupPage extends StatelessWidget {
                           ),
                         ),
                         style: TextStyle(
-                            fontSize: 20,
-                            color: Theme.of(context).primaryColor),
-                      ),
-                      TextFormField(
-                        //autofocus: true,
-                        keyboardType: TextInputType.emailAddress,
-                        decoration: InputDecoration(
-                          labelText: "Email",
-                          labelStyle: TextStyle(
-                            color: Theme.of(context).primaryColor,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 16,
-                          ),
-                        ),
-                        style: TextStyle(
                           fontSize: 20,
+                          color: Theme.of(context).primaryColor,
                         ),
                       ),
                       SizedBox(
                         height: 10,
                       ),
                       TextFormField(
-                        //autofocus: true,
+                        // autofocus: true,
                         keyboardType: TextInputType.emailAddress,
                         decoration: InputDecoration(
                           labelText: "Email",
@@ -94,10 +78,31 @@ class SigupPage extends StatelessWidget {
                         ),
                         style: TextStyle(
                           fontSize: 20,
+                          color: Theme.of(context).primaryColor,
                         ),
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 10,
+                      ),
+                      TextFormField(
+                        // autofocus: true,
+                        keyboardType: TextInputType.text,
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          labelText: "Password",
+                          labelStyle: TextStyle(
+                            color: Theme.of(context).primaryColor,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16,
+                          ),
+                        ),
+                        style: TextStyle(
+                          fontSize: 20,
+                          color: Theme.of(context).primaryColor,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 40,
                       ),
                       Container(
                         width: double.infinity,
@@ -109,16 +114,21 @@ class SigupPage extends StatelessWidget {
                         ),
                         child: FlatButton(
                           child: Text(
-                            "Sign in",
-                            style: TextStyle(color: Colors.white),
+                            "Signup",
+                            style: TextStyle(
+                              color: Colors.white,
+                            ),
                           ),
                           onPressed: () {},
                         ),
                       ),
+                      SizedBox(
+                        height: 30,
+                      ),
                     ],
                   ),
                 ),
-              ),
+              )
             ],
           ),
         ),

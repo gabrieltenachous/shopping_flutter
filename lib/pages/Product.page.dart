@@ -12,6 +12,7 @@ class ProductPage extends StatelessWidget {
     @required this.description,
     @required this.price,
   });
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,22 +22,25 @@ class ProductPage extends StatelessWidget {
             SliverAppBar(
               backgroundColor: Colors.white.withOpacity(0),
               elevation: 0.0,
-              expandedHeight: 500,
+              expandedHeight: 500.0,
               floating: false,
               pinned: true,
               flexibleSpace: FlexibleSpaceBar(
                 centerTitle: true,
-                background: Image.asset(
-                  image,
-                  width: double.infinity,
-                  fit: BoxFit.fitWidth,
+                background: Hero(
+                  tag: image,
+                  child: Image.asset(
+                    image,
+                    width: double.infinity,
+                    fit: BoxFit.fitWidth,
+                  ),
                 ),
               ),
             ),
           ];
         },
         body: ListView(
-          children: [
+          children: <Widget>[
             Padding(
               padding: EdgeInsets.only(
                 top: 10,
@@ -53,8 +57,12 @@ class ProductPage extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.all(10),
+              child: Text(description),
+            ),
+            Padding(
+              padding: EdgeInsets.all(10),
               child: Text(
-                description,
+                "Details",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
@@ -63,8 +71,7 @@ class ProductPage extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(10),
               child: Text(
-                "Nike Dri is a polyester fabric designed to helpyou keep dry so you can more comfortably work, longer",
-              ),
+                  "Nike Dri-FIT is a polyester fabric designed to help you keep dry so you can more comfortably work harder, longer."),
             ),
           ],
         ),

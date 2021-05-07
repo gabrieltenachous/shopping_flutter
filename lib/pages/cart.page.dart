@@ -4,10 +4,6 @@ class CartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0.0,
-      ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -17,26 +13,32 @@ class CartPage extends StatelessWidget {
             ),
           ),
           Container(
-            color: Theme.of(context).accentColor,
+            color: Colors.black12,
             height: 80,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.only(left: 20, top: 20),
+                  padding: EdgeInsets.only(
+                    left: 20,
+                    top: 20,
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text("TOTAL"),
+                      Text(
+                        "TOTAL",
+                      ),
                       SizedBox(
                         height: 5,
                       ),
                       Text(
                         "\$4250",
                         style: TextStyle(
-                            color: Theme.of(context).primaryColor,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20),
+                          color: Theme.of(context).primaryColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
                       ),
                     ],
                   ),
@@ -50,7 +52,9 @@ class CartPage extends StatelessWidget {
                       Radius.circular(5),
                     ),
                   ),
-                  margin: EdgeInsets.only(right: 20),
+                  margin: EdgeInsets.only(
+                    right: 20,
+                  ),
                   child: FlatButton(
                     child: Text(
                       "Checkout",
@@ -60,7 +64,7 @@ class CartPage extends StatelessWidget {
                     ),
                     onPressed: () => {},
                   ),
-                )
+                ),
               ],
             ),
           ),
@@ -73,19 +77,17 @@ class CartPage extends StatelessWidget {
 Widget productList(context) {
   return ListView(
     children: <Widget>[
-      productItem(context, "BeoPlay Speaker", "755", "assets/product-1.png"),
-      productItem(context, "Leather Wristwatch", "450", "assets/product-2.png"),
-      productItem(
-          context, "Smart Bluetooth Speaker", "900", "assets/product-3.png"),
-      productItem(context, "Smart Luggage", "100", "assets/product-4.png"),
-      productItem(context, "Smartphone Case", "99", "assets/product-5.png"),
-      productItem(context, "Speakers Stand", "49", "assets/product-6.png"),
-      productItem(context, "AirPods", "199", "assets/product-7.png"),
+      productItem(context),
+      productItem(context),
+      productItem(context),
+      productItem(context),
+      productItem(context),
+      productItem(context),
     ],
   );
 }
 
-Widget productItem(context, String title, String price, String image) {
+Widget productItem(context) {
   return Container(
     height: 120,
     margin: EdgeInsets.all(5),
@@ -96,7 +98,7 @@ Widget productItem(context, String title, String price, String image) {
           height: 100,
           margin: EdgeInsets.all(10),
           child: Image.asset(
-            image,
+            "assets/product-1.png",
             fit: BoxFit.fitWidth,
           ),
         ),
@@ -108,9 +110,9 @@ Widget productItem(context, String title, String price, String image) {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(title),
+              Text("Título do produto"),
               Text(
-                "\$$price",
+                "\$200",
                 style: TextStyle(
                   color: Theme.of(context).primaryColor,
                 ),
@@ -122,13 +124,12 @@ Widget productItem(context, String title, String price, String image) {
                 height: 30,
                 width: 120,
                 decoration: BoxDecoration(
-                  color: Theme.of(context).accentColor,
+                  color: Colors.black12,
                   borderRadius: BorderRadius.all(
                     Radius.circular(5),
                   ),
                 ),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Container(
                       width: 40,

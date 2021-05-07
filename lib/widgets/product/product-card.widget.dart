@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:shopping/pages/Product.page.dart';
+import 'package:shopping/pages/product.page.dart';
 
 class ProductCard extends StatelessWidget {
   final String image;
@@ -14,6 +13,7 @@ class ProductCard extends StatelessWidget {
     @required this.description,
     @required this.price,
   });
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -30,19 +30,22 @@ class ProductCard extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => ProductPage(
-                    image: image,
-                    title: title,
-                    description: description,
-                    price: price,
-                  ),
+                        title: title,
+                        description: description,
+                        image: image,
+                        price: price,
+                      ),
                 ),
               );
             },
-            child: Image.asset(
-              image,
-              width: 170,
-              height: 170,
-              fit: BoxFit.cover,
+            child: Hero(
+              tag: image,
+              child: Image.asset(
+                image,
+                width: 170,
+                height: 170,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           SizedBox(
@@ -53,7 +56,7 @@ class ProductCard extends StatelessWidget {
             child: Text(
               title,
               style: TextStyle(
-                fontSize: 14,
+                fontSize: 18,
                 fontWeight: FontWeight.w300,
               ),
             ),
@@ -76,7 +79,7 @@ class ProductCard extends StatelessWidget {
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
-              color: Color(0xFF00C569),
+              color: Theme.of(context).primaryColor,
             ),
           ),
         ],
