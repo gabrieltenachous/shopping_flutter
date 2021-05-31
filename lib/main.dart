@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: darkYellowTheme(),
       home: DefaultTabController(
-        length: 3,
+        length: 2,
         child: TabsPage(),
       ),
     );

@@ -39,10 +39,6 @@ class HomePage extends StatelessWidget {
                   "Melhores Cursos",
                   style: Theme.of(context).textTheme.headline,
                 ),
-                FlatButton(
-                  child: Text("Ver Todos"),
-                  onPressed: () => {},
-                ),
               ],
             ),
             SizedBox(

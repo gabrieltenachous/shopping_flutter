@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shopping/pages/cart.page.dart';
 import 'package:shopping/pages/home.page.dart';
 import 'package:shopping/pages/login.page.dart';
 
@@ -10,7 +9,6 @@ class TabsPage extends StatelessWidget {
       body: TabBarView(
         children: [
           HomePage(),
-          CartPage(),
           LoginPage(),
         ],
       ),
@@ -18,9 +16,6 @@ class TabsPage extends StatelessWidget {
         tabs: [
           Tab(
             icon: new Icon(Icons.home),
-          ),
-          Tab(
-            icon: new Icon(Icons.inventory_outlined),
           ),
           Tab(
             icon: new Icon(Icons.perm_identity),
