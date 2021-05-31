@@ -20,7 +20,7 @@ class TabsPage extends StatelessWidget {
             icon: new Icon(Icons.home),
           ),
           Tab(
-            icon: new Icon(Icons.shopping_cart),
+            icon: new Icon(Icons.inventory_outlined),
           ),
           Tab(
             icon: new Icon(Icons.perm_identity),

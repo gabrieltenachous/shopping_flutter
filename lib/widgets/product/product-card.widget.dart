@@ -5,13 +5,15 @@ class ProductCard extends StatelessWidget {
   final String image;
   final String title;
   final String description;
-  final double price;
+  final String nivel;
+  final String detalhe;
 
   ProductCard({
     @required this.image,
     @required this.title,
     @required this.description,
-    @required this.price,
+    @required this.nivel,
+    @required this.detalhe,
   });
 
   @override
@@ -30,11 +32,12 @@ class ProductCard extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => ProductPage(
-                        title: title,
-                        description: description,
-                        image: image,
-                        price: price,
-                      ),
+                    title: title,
+                    description: description,
+                    image: image,
+                    nivel: nivel,
+                    detalhe: detalhe,
+                  ),
                 ),
               );
             },
@@ -75,7 +78,7 @@ class ProductCard extends StatelessWidget {
             height: 5,
           ),
           Text(
-            "\$ $price",
+            nivel,
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,

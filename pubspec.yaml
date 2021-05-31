@@ -79,18 +79,13 @@ flutter:
   assets:
     - assets/facebook.png
     - assets/google.png    
-    - assets/Icon_Devices.png
-    - assets/Icon_Gadgets.png
-    - assets/Icon_Gaming.png
-    - assets/Icon_Mens_Shoe.png
-    - assets/Icon_Womens_Shoe.png
-    - assets/product-1.png
-    - assets/product-2.png
-    - assets/product-3.png
-    - assets/product-4.png
-    - assets/product-5.png
-    - assets/product-6.png
-    - assets/product-7.png
-    - assets/product-8.png
-    - assets/product-9.png
-    - assets/product-10.png
+    - assets/icon_ux.png
+    - assets/icon_php.png 
+    - assets/icon_java.png
+    - assets/Icon_data_base.png
+    - assets/icon_c#.png
+    - assets/Image_asp_net.png
+    - assets/Image_firebase.png
+    - assets/Image_html.png
+    - assets/Image_spring_boot.png
+    - assets/image_laravel.png 

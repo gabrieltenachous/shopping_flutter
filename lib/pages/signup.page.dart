@@ -5,6 +5,9 @@ class SignupPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Theme.of(context).primaryColor,
+        ),
         backgroundColor: Colors.white.withOpacity(0),
         elevation: 0,
       ),
@@ -20,7 +23,7 @@ class SignupPage extends StatelessWidget {
             children: <Widget>[
               Container(
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Theme.of(context).splashColor,
                   boxShadow: [
                     new BoxShadow(
                       color: Colors.black12,
@@ -40,7 +43,7 @@ class SignupPage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
                       Text(
-                        "Signup",
+                        "Cadastrar",
                         style: Theme.of(context).textTheme.display2,
                       ),
                       SizedBox(
@@ -50,7 +53,7 @@ class SignupPage extends StatelessWidget {
                         // autofocus: true,
                         keyboardType: TextInputType.text,
                         decoration: InputDecoration(
-                          labelText: "Name",
+                          labelText: "Nome",
                           labelStyle: TextStyle(
                             color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.w400,
@@ -89,7 +92,7 @@ class SignupPage extends StatelessWidget {
                         keyboardType: TextInputType.text,
                         obscureText: true,
                         decoration: InputDecoration(
-                          labelText: "Password",
+                          labelText: "Senha",
                           labelStyle: TextStyle(
                             color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.w400,

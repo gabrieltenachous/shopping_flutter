@@ -4,13 +4,15 @@ class ProductPage extends StatelessWidget {
   final String image;
   final String title;
   final String description;
-  final double price;
+  final String nivel;
+  final String detalhe;
 
   ProductPage({
     @required this.image,
     @required this.title,
     @required this.description,
-    @required this.price,
+    @required this.nivel,
+    @required this.detalhe,
   });
 
   @override
@@ -62,7 +64,7 @@ class ProductPage extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(10),
               child: Text(
-                "Details",
+                "Detalhes",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
@@ -70,8 +72,7 @@ class ProductPage extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.all(10),
-              child: Text(
-                  "Nike Dri-FIT is a polyester fabric designed to help you keep dry so you can more comfortably work harder, longer."),
+              child: Text(detalhe),
             ),
           ],
         ),

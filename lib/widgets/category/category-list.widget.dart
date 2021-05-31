@@ -8,11 +8,11 @@ class CategoryList extends StatelessWidget {
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
-          CategoryItem(image: "assets/Icon_Devices.png"),
-          CategoryItem(image: "assets/Icon_Gadgets.png"),
-          CategoryItem(image: "assets/Icon_Gaming.png"),
-          CategoryItem(image: "assets/Icon_Mens_Shoe.png"),
-          CategoryItem(image: "assets/Icon_Womens_Shoe.png"),
+          CategoryItem(image: "assets/icon_ux.png"),
+          CategoryItem(image: "assets/icon_php.png"),
+          CategoryItem(image: "assets/Icon_data_base.png"),
+          CategoryItem(image: "assets/icon_java.png"),
+          CategoryItem(image: "assets/icon_c#.png"),
         ],
       ),
     );

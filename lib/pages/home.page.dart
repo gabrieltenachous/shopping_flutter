@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
               height: 30,
             ),
             Text(
-              "Categories",
+              "Categorias",
               style: Theme.of(context).textTheme.headline,
             ),
             SizedBox(
@@ -36,11 +36,11 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
-                  "Best Selling",
+                  "Melhores Cursos",
                   style: Theme.of(context).textTheme.headline,
                 ),
                 FlatButton(
-                  child: Text("See All"),
+                  child: Text("Ver Todos"),
                   onPressed: () => {},
                 ),
               ],

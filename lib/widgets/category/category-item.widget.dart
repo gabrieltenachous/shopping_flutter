@@ -26,7 +26,9 @@ class CategoryItem extends StatelessWidget {
           Radius.circular(64),
         ),
       ),
-      child: Image.asset(image),
+      child: Image.asset(
+        image,
+      ),
     );
   }
 }

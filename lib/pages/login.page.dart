@@ -48,18 +48,18 @@ class LoginPage extends StatelessWidget {
                             Column(
                               children: <Widget>[
                                 Text(
-                                  "Welcome",
+                                  "Bem-Vindo",
                                   style: Theme.of(context).textTheme.display2,
                                 ),
                                 Text(
-                                  "Sign in to continue",
+                                  "Entre para Continuar",
                                   style: Theme.of(context).textTheme.subhead,
                                 ),
                               ],
                             ),
                             FlatButton(
                               child: Text(
-                                "Sign Up",
+                                "Cadastrar",
                                 style: TextStyle(
                                   color: Theme.of(context).primaryColor,
                                 ),
@@ -95,7 +95,7 @@ class LoginPage extends StatelessWidget {
                           ),
                           validator: (value) {
                             if (value.isEmpty) {
-                              return 'Invalid E-mail';
+                              return 'Email Invalido';
                             }
                             return null;
                           },
@@ -109,7 +109,7 @@ class LoginPage extends StatelessWidget {
                           keyboardType: TextInputType.text,
                           obscureText: true,
                           decoration: InputDecoration(
-                            labelText: "Password",
+                            labelText: "Senha",
                             labelStyle: TextStyle(
                               color: Theme.of(context).primaryColor,
                               fontWeight: FontWeight.w400,
@@ -122,7 +122,7 @@ class LoginPage extends StatelessWidget {
                           ),
                           validator: (value) {
                             if (value.isEmpty) {
-                              return 'Invalid Password';
+                              return 'Senha Invalida';
                             }
                             return null;
                           },
@@ -133,7 +133,7 @@ class LoginPage extends StatelessWidget {
                           alignment: Alignment.centerRight,
                           child: FlatButton(
                             child: Text(
-                              "Forgot your password?",
+                              "Esqueceu Sua Senha?",
                               style: TextStyle(
                                 color: Theme.of(context).primaryColor,
                               ),
@@ -154,7 +154,7 @@ class LoginPage extends StatelessWidget {
                           ),
                           child: FlatButton(
                             child: Text(
-                              "Sign In",
+                              "Logar",
                               style: TextStyle(
                                 color: Colors.white,
                               ),
@@ -182,7 +182,7 @@ class LoginPage extends StatelessWidget {
               Container(
                 padding: EdgeInsets.only(top: 15, bottom: 15),
                 child: Text(
-                  "- OR -",
+                  "- OU -",
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w300,
@@ -211,7 +211,7 @@ class LoginPage extends StatelessWidget {
                           "assets/facebook.png",
                         ),
                       ),
-                      Text("Sign In with Facebook"),
+                      Text("Logar com Facebook"),
                     ],
                   ),
                   onPressed: () {},
@@ -242,7 +242,7 @@ class LoginPage extends StatelessWidget {
                           "assets/google.png",
                         ),
                       ),
-                      Text("Sign In with Google"),
+                      Text("Logar com o Google"),
                     ],
                   ),
                   onPressed: () {},
